@@ -75,17 +75,6 @@ const figures = [
             {{ tag }}
           </li>
         </ul>
-
-        <NuxtLink
-          to="/classement"
-          class="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-jade-500 to-jade-700 px-7 py-3 text-sm font-bold text-white shadow-halo transition-transform hover:-translate-y-0.5"
-        >
-          Consulter le classement
-          <UIcon
-            name="i-lucide-arrow-right"
-            class="h-4 w-4"
-          />
-        </NuxtLink>
       </div>
     </section>
 

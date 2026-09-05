@@ -20,16 +20,16 @@ const href = computed(() => decorate(props.operator.href))
           :name="operator.name"
           class="shrink-0"
         />
-        <h3 class="min-w-0 flex-1 truncate font-display text-base font-extrabold leading-tight text-abyss-900">
-          {{ operator.name }}
-        </h3>
-        <div class="shrink-0 text-right">
-          <p class="font-display text-xl font-extrabold leading-none text-abyss-900">
+        <div class="min-w-0 flex-1">
+          <h3 class="truncate font-display text-base font-extrabold leading-tight text-abyss-900">
+            {{ operator.name }}
+          </h3>
+          <p class="mt-1 font-display text-xl font-extrabold leading-none text-abyss-900">
             {{ operator.score.toFixed(1) }}
           </p>
           <ScoreStars
             :stars="operator.stars"
-            class="mt-1 scale-90 origin-right justify-end"
+            class="mt-1 origin-left scale-90"
           />
         </div>
       </div>
