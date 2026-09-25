@@ -3,6 +3,8 @@ withDefaults(defineProps<{ tone?: 'dark' | 'light', compact?: boolean }>(), {
   tone: 'dark',
   compact: false
 })
+
+const uid = useId()
 </script>
 
 <template>
@@ -15,7 +17,7 @@ withDefaults(defineProps<{ tone?: 'dark' | 'light', compact?: boolean }>(), {
     >
       <defs>
         <linearGradient
-          :id="`tsp-face-${tone}`"
+          :id="`tsp-face-${uid}`"
           x1="0"
           y1="0"
           x2="1"
@@ -34,7 +36,7 @@ withDefaults(defineProps<{ tone?: 'dark' | 'light', compact?: boolean }>(), {
 
       <polygon
         points="20,1 36.45,10.5 36.45,29.5 20,39 3.55,29.5 3.55,10.5"
-        :fill="`url(#tsp-face-${tone})`"
+        :fill="`url(#tsp-face-${uid})`"
         stroke="#35c297"
         stroke-width="1.4"
         stroke-linejoin="round"

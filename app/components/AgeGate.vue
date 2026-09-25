@@ -26,10 +26,14 @@ function confirm() {
 
 const locked = computed(() => status.value !== 'granted')
 
+function lockScroll(ageLocked: boolean) {
+  if (!import.meta.client) return
+  const spotlight = document.documentElement.dataset.spotlight === 'open'
+  document.documentElement.style.overflow = ageLocked || spotlight ? 'hidden' : ''
+}
+
 watch(locked, (value) => {
-  if (import.meta.client) {
-    document.documentElement.style.overflow = value ? 'hidden' : ''
-  }
+  lockScroll(value)
 }, { immediate: true })
 
 onBeforeUnmount(() => {

@@ -37,6 +37,7 @@ useSeoMeta({
     </div>
 
     <AgeGate />
+    <SpotlightModal />
     <CookieBanner />
   </UApp>
 </template>
